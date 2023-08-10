@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,  // Versión del manifiesto (3 para extensiones modernas)
+  "name": "Mostrar y Copiar Contraseñas",  // Nombre de la extensión
+  "version": "1.0",  // Versión de la extensión
+  "description": "Esta extensión te permite mostrar y copiar contraseñas en cualquier sitio web",  // Descripción de la extensión
+  "permissions": ["activeTab"],  // Permisos requeridos por la extensión
+  "content_scripts": [  // Scripts de contenido que se ejecutarán en las páginas web
+    {
+      "matches": ["<all_urls>"],  // Coincide con todas las URLs
+      "js": ["contentScript.js"]  // Archivo JavaScript a inyectar
+    }
+  ],
+  "action": {  // Acción del ícono de la extensión en la barra de herramientas
+    "default_popup": "popup.html"  // Archivo HTML del popup por defecto
+  }
+}
